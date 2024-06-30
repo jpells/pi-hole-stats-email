@@ -1,0 +1,20 @@
+name: pi-hole-stats-email
+help: Send pi-hole stats via email
+version: 0.1.0
+
+args:
+- name: smtp_host
+  required: true
+  help: SMTP Host and Port (e.g. smtp.mailserver.com:465)
+- name: smtp_credentials
+  required: true
+  help: SMTP Credentials for Login (e.g. username:password)
+- name: from_email
+  required: true
+  help: Email address to send as (e.g. from@mailserver.com)
+- name: to_email
+  required: true
+  help: Email address for delivery (e.g. to@mailserver.com)
+
+examples:
+- pi-hole-stats-email smtp.mailserver.com:465 username:password from@mailserver.com to@mailserver.com
